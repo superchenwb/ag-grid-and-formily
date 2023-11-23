@@ -1,0 +1,63 @@
+.toolbar-container {
+  position: relative;
+  display: flex;
+  padding: 8px 0;
+  justify-content: end;
+}
+
+.edit-btn {
+  background-color: #4096ff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.editing {
+  .edit-btn {
+    background-color: #0958d9;
+  }
+  .editor-options {
+    width: 217px;
+  }
+}
+
+.editor-options {
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+  width: 0; /* 初始宽度 */
+  text-wrap: nowrap;
+}
+
+.editor-options.show-options {
+  display: block;
+}
+
+.option-btn {
+  background-color: #ccc;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.option-btn:hover {
+  background-color: #333;
+}
+
+.remove-btn {
+  background-color: #f5222d;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #820014;
+  }
+}

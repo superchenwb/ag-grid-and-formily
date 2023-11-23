@@ -1,0 +1,33 @@
+.ag-cell-not-inline-editing {
+  &.gant-highlight-editable {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      background-image: linear-gradient(
+        to top left,
+        transparent 0%,
+        transparent 49.9%,
+        #ccc 50%,
+        #ccc 100%
+      );
+      background-repeat: no-repeat;
+      background-size: 6px 6px;
+      pointer-events: none;
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+
+.ag-cell-inline-editing.gant-highlight-editable,
+.ag-cell-focus:not(
+    .ag-cell-range-selected
+  ):focus-within.gant-highlight-editable {
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
